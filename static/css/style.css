@@ -1,0 +1,395 @@
+/* Main layout */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.container-fluid {
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #343a40;
+    color: #fff;
+    padding-top: 20px;
+    transition: all 0.3s;
+    z-index: 1000;
+}
+
+.sidebar-header {
+    padding: 0 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.sidebar-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #fff;
+}
+
+.sidebar-menu {
+    padding: 20px 0;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu li {
+    margin-bottom: 5px;
+}
+
+.sidebar-menu a {
+    display: block;
+    padding: 10px 15px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: all 0.3s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu a:hover,
+.sidebar-menu a.active {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-left-color: #17a2b8;
+}
+
+.sidebar-menu a.disabled {
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+    padding-bottom: 60px;
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Page system */
+.page {
+    display: none;
+    padding: 20px;
+    animation: fadeIn 0.5s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Ensure all rows have proper box-sizing */
+.row {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Ensure all columns have proper box-sizing */
+.col-md-12 {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Software spec page */
+#markdown-input {
+    min-height: 200px;
+    max-height: 50vh;
+    font-family: 'Roboto Mono', monospace;
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#markdown-preview {
+    min-height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Button container - make sure it's always visible */
+.d-grid.gap-2.d-md-flex.justify-content-md-end.mb-3 {
+    position: sticky;
+    bottom: 10px;
+    background-color: white;
+    padding: 10px 0;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Diagram containers */
+.diagram-container {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Code view */
+.code-container {
+    margin-top: 20px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+.code-file {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.code-filename {
+    padding: 10px 15px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.code-file pre {
+    margin: 0;
+    padding: 15px;
+    background-color: #f9f9f9;
+    font-family: 'Roboto Mono', monospace;
+    max-height: 400px;
+    overflow: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mermaid diagrams */
+.mermaid {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    overflow: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Use cases */
+.use-case-select-container {
+    margin-bottom: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.use-case-description {
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Loading spinner */
+#loading-spinner {
+    display: none;
+    text-align: center;
+    margin: 20px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Error message */
+#error-message {
+    display: none;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+    }
+    
+    .sidebar-menu {
+        padding: 10px 0;
+    }
+    
+    .sidebar-header {
+        padding: 10px 15px;
+    }
+    
+    .page {
+        padding: 10px;
+    }
+}
+
+/* Code editor and display */
+.code-display {
+    margin-top: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    font-family: 'Roboto Mono', monospace;
+    white-space: pre-wrap;
+    max-height: 300px;
+    overflow-y: auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+.btn-secondary {
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+/* Toast UI Editor Styles */
+.markdown-editor {
+    min-height: 400px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* Make the editor take full height in the view */
+.toastui-editor-main {
+    min-height: 400px;
+    max-width: 100%;
+}
+
+/* Make sure the editor container doesn't overflow */
+.toastui-editor-defaultUI {
+    border: none !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Fix editor preview width issues */
+.toastui-editor-main .toastui-editor-md-preview {
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Fix editor content width */
+.toastui-editor-defaultUI .toastui-editor {
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Keep the default font in the editor */
+.toastui-editor-defaultUI .ProseMirror {
+    font-family: 'Roboto Mono', monospace;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Add some space between editor sections */
+.toastui-editor-main-container {
+    margin-bottom: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* Make sure the preview section has enough space */
+.toastui-editor-md-preview {
+    padding: 15px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+/* Make the editor responsive */
+@media (max-width: 768px) {
+    .markdown-editor {
+        min-height: 300px;
+    }
+    
+    .toastui-editor-main {
+        min-height: 300px;
+    }
+    
+    /* Fix smaller screen editor layout */
+    .toastui-editor-defaultUI .toastui-editor-toolbar {
+        overflow-x: auto;
+    }
+    
+    /* Change the editor layout for small screens */
+    .toastui-editor-defaultUI {
+        flex-direction: column;
+    }
+} 
