@@ -1,0 +1,22 @@
+Generate a Mermaid sequence diagram for the following use case:
+
+Use Case: {use_case_name}
+Description: {use_case_description}
+
+Actors: {actors}
+
+Flow:
+{flow}
+
+Other relevant parts of the specification:
+- Classes: {classes}
+- Architecture Components: {architecture_components}
+
+Rules:
+1. Use standard Mermaid sequence diagram syntax
+2. Include all actors and necessary components as participants
+3. Show the full sequence of interactions based on the flow
+4. Include message labels that clearly describe each action
+5. Include appropriate activation boxes
+6. Include only the Mermaid code without any other explanation
+7. Start with 'sequenceDiagram' 

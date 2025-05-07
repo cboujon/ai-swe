@@ -1,0 +1,10 @@
+Generate a Mermaid class diagram based on the following specification:
+
+{spec}
+
+Rules:
+1. Use standard Mermaid class diagram syntax
+2. Include all classes with their attributes and methods
+3. Show proper relationships between classes
+4. Include only the Mermaid code without any other explanation
+5. Start with 'classDiagram' 

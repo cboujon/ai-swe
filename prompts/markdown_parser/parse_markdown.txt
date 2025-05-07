@@ -1,0 +1,26 @@
+Please analyze the following software specification written in Markdown and extract a structured representation.
+
+Markdown Specification:
+```
+{markdown}
+```
+
+Extract the following information and format it as a JSON object:
+1. Title (from the first H1 heading)
+2. Description (from the section after the title)
+3. Classes with their attributes and methods (look for a "Classes" section)
+4. Architecture components and their connections (look for an "Architecture" section)
+5. Use cases with their flows, actors, preconditions, and postconditions (look for a "Use Cases" section)
+
+For the JSON structure, use the following schema:
+```
+{json_schema}
+```
+
+Make sure to:
+1. Include any relationships between classes that are mentioned
+2. Preserve the flow of the use cases in the right order
+3. Include all attributes and methods for each class
+4. Include all components and their connections in the architecture
+
+Return ONLY the JSON without any explanation or additional text. 

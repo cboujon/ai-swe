@@ -1,0 +1,27 @@
+Generate Python code for a project based on the following specification and diagrams:
+
+Specification:
+{spec}
+
+Diagrams:
+{diagrams}
+
+Requirements:
+1. Create a file for each class in the specification
+2. Create a main.py file that imports and uses these classes
+3. Add proper type hints, docstrings, and logging
+4. Include clear, maintainable code structure
+5. Create a requirements.txt file with necessary dependencies
+6. Create a README.md with installation and usage instructions
+
+Respond with a JSON structure containing:
+{
+    "filename1.py": "file content",
+    "filename2.py": "file content",
+    "main.py": "file content",
+    "requirements.txt": "requirements content",
+    "README.md": "readme content"
+}
+
+Important: Only include the JSON output, without any explanation or additional text.
+Use proper Python-specific code formatting with correct indentation. 
